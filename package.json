@@ -1,0 +1,19 @@
+{
+  "name": "darkest-of-all-arts",
+  "version": "1.0.0",
+  "description": "The Darkest of All Arts",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b0oh/darkest-of-all-arts.git"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/b0oh/darkest-of-all-arts#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "elm": "^0.19.0-no-deps",
+    "uglify-js": "^3.6.0"
+  }
+}
