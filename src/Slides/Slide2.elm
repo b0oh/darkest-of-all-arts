@@ -1,4 +1,4 @@
-module Slides.Slide1 exposing (slide)
+module Slides.Slide2 exposing (slide)
 
 import Element
 import Element.Font as Font

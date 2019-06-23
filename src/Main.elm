@@ -9,7 +9,8 @@ import Element exposing (Element)
 import Element.Font as Font
 import Html exposing (Html)
 import Html.Events.Extra.Touch as Touch
-import Slides.Slide1 as Slide2
+import Slides.Slide2 as Slide2
+import Slides.Slide3 as Slide3
 import Style
 import Url exposing (Url)
 
@@ -51,6 +52,7 @@ slide1 _ =
 slides =
     [ slide1
     , Slide2.slide
+    , Slide3.slide
     ]
 
 
