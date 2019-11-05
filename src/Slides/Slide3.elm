@@ -2,13 +2,14 @@ module Slides.Slide3 exposing (slide)
 
 import Element
 import Element.Font as Font
+import Layout
 import Slides.Slide2 as Slide2
 import Style
 
 slide ({ height, width } as viewport) =
     let
         base_size =
-            round (toFloat height / 12)
+            round (toFloat height / 13.5)
 
         inner_slide =
             Slide2.slide viewport
@@ -21,7 +22,7 @@ slide ({ height, width } as viewport) =
         , Style.font_family
         ]
         [ inner_slide
-        , Element.text "⟼"
+        , Layout.reduce
         , Element.text "3"
         ]
             |> Element.el

@@ -2,9 +2,10 @@ module Layout exposing (..)
 
 import Element
 import Element.Font as Font
+import Style
 
 
-space_right space el =
+spaceRight space el =
     Element.el
         [ Element.paddingEach
               { top = 0
@@ -24,11 +25,59 @@ sym str =
     Element.el [ Font.italic ] (Element.text str)
 
 
-fn base_size name arg =
+fn baseSize name arg =
     Element.row
         []
-        [ space_right (base_size // 4) <| sym name
+        [ spaceRight (baseSize // 4) <| sym name
         , lit "("
-        , space_right (base_size // 16) <| sym arg
+        , spaceRight (baseSize // 16) <| sym arg
+        , lit ")"
+        ]
+
+
+def baseSize name args =
+    let
+        elements =
+            args
+                |> List.map sym
+                |> List.intersperse (lit ", ")
+    in
+    [ spaceRight (baseSize // 4) <| sym name
+    , lit "("
+    ] ++ elements ++
+    [ lit ")"
+    ]
+        |> Element.row
+            []
+
+
+tuple elements =
+    [ lit "("
+    ] ++ List.intersperse (lit ", ") elements ++
+    [ lit ")"
+    ]
+        |> Element.row
+            []
+
+
+arrow =
+    lit "→"
+
+
+reduce =
+    lit "⟼"
+
+
+apply baseSize abs args =
+    let
+        args_ =
+            List.intersperse (lit ",") args
+                |> Element.row [ Style.spacing baseSize ]
+    in
+    Element.row
+        []
+        [ spaceRight (baseSize // 4) <| abs
+        , lit "("
+        , spaceRight (baseSize // 16) <| args_
         , lit ")"
         ]

@@ -28,6 +28,15 @@ spacing base_size =
     Element.spacing <| base_size // 3
 
 
+nested baseSize =
+    Element.paddingEach
+        { top = 0
+        , right = 0
+        , bottom = 0
+        , left = baseSize
+        }
+
+
 modern_serif =
     Font.external
         { name = "Computer Modern Serif"

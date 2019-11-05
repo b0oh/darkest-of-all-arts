@@ -11,6 +11,10 @@ import Html exposing (Html)
 import Html.Events.Extra.Touch as Touch
 import Slides.Slide2 as Slide2
 import Slides.Slide3 as Slide3
+import Slides.Slide4 as Slide4
+import Slides.Slide5 as Slide5
+import Slides.Slide6 as Slide6
+import Slides.Slide7 as Slide7
 import Style
 import Url exposing (Url)
 
@@ -53,6 +57,10 @@ slides =
     [ slide1
     , Slide2.slide
     , Slide3.slide
+    , Slide4.slide
+    , Slide5.slide
+    , Slide6.slide
+    , Slide7.slide
     ]
 
 
