@@ -16,7 +16,7 @@ $ npm i
 ## Run
 
 ```
-$ ./live <port>
+$ ./live.sh <port>
 ```
 
 
